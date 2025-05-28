@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff84;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #4a90e2;
+      background-image: linear-gradient(to right,rgba(22, 119, 144, 0.5),rgb(19, 214, 146));
+      color: white;
+      margin-bottom: 30px;
+      display: flex;
+      gap:30px ;
+      flex-wrap: wrap;
+    }
+    .header div{
+      width: 30%;
+    }
+    .header nav{
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 25px;
+    }
+  .header nav a button{
+    width:45%;
+    font-size: 18px;
+    background-color: none;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    font-weight: bold;
+    color: rgb(4, 70, 70);
+    padding-bottom: 5px;
+  }
+  .header nav a button:hover{
+    transition: 0.25s;
+    scale: 1.1;
+    border-bottom:3px solid rgb(4, 70, 70) ;
+  }
+  .block{
+    width: 100%;
+    height: 100vh;
+  }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .heading{
+      color: #224c76;
+    }
+    .form-section {
+      flex: 1 1 300px;
+      font-size: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    form .full-width {
+      grid-column: span 2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input:hover{
+        transition: 0.25s;
+        scale:1.025;
+    }
+    textarea:hover{
+        transition: 0.25s;
+        scale:1.025;
+    }
+
+    .submit{
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      grid-column: span 2;
+      transition: 0.25s;
+      box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+       background-color: #4a90e2;
+      background-image: linear-gradient(45deg,rgba(22, 119, 144, 0.5),rgb(19, 214, 146));
+    }
+
+    .submit:hover {
+      background-color: #357ABD;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+      scale:0.975;
+    }
+
+    @media (max-width: 700px ) {
+      .header{
+        display: block;
+        flex-direction: row;
+      }
+      .header div{
+        width: 100%;
+      }
+      .header div center h1{
+        font-size: 25px;
+      }
+      .header nav{
+        width:100%;
+        padding-top: 0%;
+        height: 30px;
+      }
+      .header nav a button{
+        font-size: 15px;
+      }
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        grid-column: span 1;
+      }
+    }
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+
+    .gallery-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0f427c;
+    }
+
+    .input-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+     .input-section input[type="file"] {
+      padding: 10px;
+      background-image:linear-gradient(to right,rgba(24, 214, 144, 0.863),rgba(23, 130, 183, 0.56)) ;
+    }
+      
+     .gallery {
+        display: grid;
+      grid-template-columns: 30% 30% 30%;
+      max-width: 80%;
+      gap:3%;
+      align-items: center;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 50px;
+
+    }
+
+    .gallery-item {
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0 0px 10px 5px rgba(0,0,0,0.5);
+    }
+     .gallery-item button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .gallery-item button:hover {
+      background-color: darkred;
+    }
+    @media  (max-width:700px) {
+      .gallery{
+        display:block;
+
+      }
+      .gallery-item{
+        margin-bottom: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <center>
+    <h1>ApexPlanet internship</h1>
+    <h3>Task 2</h3>
+       </center>
+    </div>
+
+    <nav>
+      <a href="#contact"> 
+        <button>Contact</button>
+      </a>
+      <a href="#gal"> 
+        <button>image loader</button>
+      </a>
+    </nav>
+  </div>
+
+<section class="block" id="contact">
+  <div class="container">
+    <div class="form-section">
+      <center>
+      <h2 class="heading">Contact form:</h2>
+      </center>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="email" required>
+        </div>
+        <div class="full-width">
+            <label for="subject">Subject</label><br>
+            <input type="text" maxlength="75" minlength="5" placeholder="subject of contacting" id="subject">
+        </div>
+        <div class="full-width">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" class="submit" onclick="Submit()">Submit</button>
+      </form>
+    </div>
+  </div>
+  </section>
+ <section class="image-loader" id="gal">
+    <div class="gallery-container">
+    <h2>Image Gallery (File Upload)</h2>
+    <div class="input-section">
+  <input type="file" id="image-file" accept="image/*" onchange="handleFileUpload(event)" />
+  <br><br>
+  <button onclick="submitGallery()" class="submit">Submit Gallery</button>
+</div>
+ </section>
+ <section class="gal-section">
+
+ <div class="gallery" id="gallery">
+      
+    </div>
+ </section>   
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      alert("All fields are required!");
+      e.preventDefault(); 
+      return;
+    }
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+      alert("Please enter a valid email address.");
+      e.preventDefault();
+    }
+  });
+  function Submit(){
+     const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+      if(name != null && email != null && message != null){
+        alert("Hello! "+ name + " We will respond your message soon. Thanks for contacting us");
+      }
+      else{
+        alert("please fill the form");
+      }
+  }
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file || !file.type.startsWith("image/")) {
+        alert("Please select a valid image file.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const gallery = document.getElementById("gallery");
+
+        const item = document.createElement("div");
+        item.className = "gallery-item";
+
+        const img = document.createElement("img");
+        img.src = e.target.result;
+
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "X";
+        delBtn.onclick = () => item.remove();
+
+        item.appendChild(img);
+        item.appendChild(delBtn);
+        gallery.appendChild(item);
+      };
+
+      reader.readAsDataURL(file);
+
+      event.target.value = "";
+    }
+    function submitGallery() {
+  alert("Gallery submitted! (This is just a demo, no backend to save)");
+}
+</script>
+</body>
+</html>
